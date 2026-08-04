@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hadia Kulsoom | Romance Author</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Bodoni+Moda:ital,wght@0,500;0,600;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{
+  --obsidian:#171419; --espresso:#2A2020; --ivory:#E8DDCC;
+  --rose:#9C7078; --burgundy:#5B303B; --gold:#B49A6A;
+  --line: rgba(180,154,106,0.22);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{ margin:0; background:var(--obsidian); color:var(--ivory); font-family:'Lora', serif; overflow-x:hidden;}
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+section{position:relative; z-index:1;}
+.script{ font-family:'Mrs Saint Delafield', cursive; }
+.wrap{ max-width:960px; margin:0 auto; padding:0 2rem;}
+
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;
+  padding:1.3rem 1rem; background:linear-gradient(to bottom, rgba(23,20,25,0.94), transparent);
+  font-family:'Bodoni Moda', serif; font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase;
+}
+nav a{ color:var(--ivory); text-decoration:none; opacity:0.75; transition:opacity .3s, color .3s;}
+nav a:hover{ opacity:1; color:var(--gold);}
+
+.divider{ display:flex; align-items:center; justify-content:center; gap:1rem; padding:3rem 2rem; color:var(--gold); font-size:1.1rem;}
+.divider .rule{ height:1px; width:100px; background:linear-gradient(90deg, transparent, var(--line), transparent);}
+
+.eyebrow{ font-family:'Bodoni Moda', serif; font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:0.9rem;}
+
+/* SPARKLES / CELESTIAL ACCENTS */
+.sparkle-field{ position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:0;}
+.sparkle{ position:absolute; color:var(--gold); opacity:0.55; animation:sparkle-pulse 3.6s ease-in-out infinite;}
+@keyframes sparkle-pulse{ 0%,100%{opacity:0.15; transform:scale(0.8) rotate(0deg);} 50%{opacity:0.85; transform:scale(1.15) rotate(15deg);} }
+.sparkle-inline{ color:var(--gold); font-size:0.85em; opacity:0.85; display:inline-block; margin:0 0.35em; }
+.dust{ position:absolute; pointer-events:none; z-index:0; }
+.dust span{ position:absolute; width:3px; height:3px; border-radius:50%; background:var(--gold); opacity:0.4; animation:dust-float 7s ease-in-out infinite;}
+@keyframes dust-float{ 0%,100%{ transform:translateY(0) translateX(0); opacity:0.15;} 50%{ transform:translateY(-14px) translateX(6px); opacity:0.7;} }
+.corner-flourish{ position:absolute; width:110px; height:110px; opacity:0.55; z-index:0; pointer-events:none; }
+.corner-flourish.tl{ top:1.5rem; left:1.5rem; }
+.corner-flourish.br{ bottom:1.5rem; right:1.5rem; transform:rotate(180deg); }
+.wax-seal{ width:64px; height:64px; margin:0 auto 1.3rem; opacity:0.92; }
+.hand-glyph{ color:var(--gold); font-size:1.3rem; }
+
+/* WHIMSICAL QUOTE BANNER */
+.quote-banner{ padding:6rem 2rem; text-align:center; position:relative; overflow:hidden;
+  background:radial-gradient(ellipse at 50% 0%, rgba(91,48,59,0.3), transparent 60%), var(--obsidian);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.quote-banner .moonlet{ width:42px; height:42px; margin:0 auto 1.6rem; opacity:0.9;}
+.quote-banner blockquote{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:clamp(1.4rem,3.6vw,2.1rem); line-height:1.55; color:var(--ivory); max-width:620px; margin:0 auto 1rem; position:relative; z-index:1;}
+.quote-banner .attribution{ font-family:'Bodoni Moda', serif; font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); position:relative; z-index:1;}
+
+/* HERO */
+.hero{
+  min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:6rem 2rem 2rem;
+  background: radial-gradient(ellipse at 30% 20%, rgba(91,48,59,0.25), transparent 55%),
+              radial-gradient(ellipse at 75% 80%, rgba(180,154,106,0.08), transparent 50%);
+  border-bottom:1px solid var(--line);
+}
+.moon{ width:50px; height:50px; margin-bottom:1.6rem; opacity:0.9; animation:flicker 6s ease-in-out infinite;}
+@keyframes flicker{ 0%,100%{opacity:0.75;} 50%{opacity:1;} }
+h1.wordmark{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:clamp(2.4rem,7vw,4.2rem); letter-spacing:0.06em; margin:0;}
+.role{ font-family:'Bodoni Moda', serif; font-size:0.72rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--rose); margin-top:0.9rem;}
+.tagline{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.3rem; color:var(--ivory); margin:1rem 0 0; max-width:480px;}
+.btn-row{ display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center; margin-top:2.4rem;}
+.btn{
+  font-family:'Bodoni Moda', serif; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase;
+  text-decoration:none; padding:0.85rem 1.7rem; border:1px solid var(--gold); color:var(--gold);
+  transition:background .3s, color .3s; cursor:pointer; background:none;
+}
+.btn.filled{ background:var(--gold); color:var(--obsidian); }
+.btn:hover{ background:var(--gold); color:var(--obsidian); }
+.hero-note{ margin-top:2rem; color:var(--rose); font-size:0.9rem; font-style:italic;}
+
+/* FEATURED BOOK */
+.book-spotlight{ padding:6rem 0 2rem; display:grid; grid-template-columns:0.8fr 1.2fr; gap:3.5rem; align-items:start; position:relative;}
+.book-cover{
+  aspect-ratio:2/3;
+  border:1px solid var(--line); overflow:hidden;
+  transition:transform .5s ease, box-shadow .5s ease;
+}
+.book-cover:hover{ transform:translateY(-6px) scale(1.015); box-shadow:0 20px 50px rgba(0,0,0,0.5);}
+.book-cover img{ width:100%; height:100%; object-fit:cover; display:block;}
+.book-info h2{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:2.6rem; margin:0 0 1rem;}
+.book-info p.line{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.2rem; color:var(--rose); margin:0 0 1.2rem; line-height:1.5;}
+.book-info p.desc{ font-size:1rem; line-height:1.85; color:var(--ivory); margin-bottom:1rem;}
+.chip-row{ display:flex; gap:0.55rem; flex-wrap:wrap; margin-bottom:1.5rem;}
+.chip{ font-family:'Bodoni Moda', serif; font-size:0.6rem; letter-spacing:0.13em; text-transform:uppercase; border:1px solid var(--line); padding:0.38rem 0.7rem; color:var(--rose);}
+.link-row{ display:flex; gap:1.6rem; flex-wrap:wrap;}
+.text-link{ font-family:'Bodoni Moda', serif; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:0.25rem;}
+.text-link:hover{ color:var(--ivory); border-color:var(--gold);}
+
+/* WHY-THIS-BOOK (moved under Built From Ashes heading) */
+.why-inline{ margin:2.2rem 0 2rem; padding-top:1.8rem; border-top:1px solid var(--line);}
+.why-inline-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;}
+.why-inline-card h4{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.05rem; color:var(--gold); margin:0 0 0.35rem;}
+.why-inline-card p{ color:var(--rose); font-size:0.85rem; line-height:1.6; margin:0;}
+
+/* EDITIONS COMPARE */
+.editions{ padding:5rem 0; text-align:center;}
+.editions h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2.2rem; margin-bottom:0.6rem;}
+.editions p{ color:var(--rose); max-width:520px; margin:0 auto 3rem;}
+.ed-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.6rem; text-align:left;}
+.ed-card{ border:1px solid var(--line); padding:2.2rem; background:linear-gradient(160deg, rgba(180,154,106,0.05), rgba(91,48,59,0.05));}
+.ed-card h3{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.5rem; margin:0 0 1rem;}
+.ed-card ul{ list-style:none; padding:0; margin:0 0 1.6rem; color:var(--rose); font-size:0.92rem; line-height:2;}
+.ed-card ul li::before{ content:"♡ "; color:var(--gold);}
+
+/* ASH BOX */
+.ash-box{ padding:6rem 0; position:relative;}
+.ash-box-panel{ border:1px solid var(--line); padding:3.2rem; background:linear-gradient(160deg, rgba(180,154,106,0.06), rgba(91,48,59,0.08)); text-align:center; position:relative; overflow:hidden;}
+.ash-box-panel .glyph-big{ font-size:1.8rem; margin-bottom:1rem;}
+.ash-box-panel h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2.3rem; margin:0 0 0.8rem; letter-spacing:0.02em;}
+.ash-box-panel .ash-tagline{ font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--rose); font-size:1.1rem; margin:0 auto 1.6rem; max-width:520px; line-height:1.6;}
+.ash-box-panel .ash-desc{ max-width:600px; margin:0 auto 2.6rem; font-size:0.96rem; line-height:1.85; color:var(--ivory);}
+.ash-box-panel .ash-desc p{ margin:0 0 1rem;}
+.ash-box-panel .ash-desc p:last-child{ margin-bottom:0;}
+.ash-contents{ max-width:600px; margin:0 auto 2.6rem; text-align:left; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:2rem 0;}
+.ash-contents-list{ list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr 1fr; gap:0.8rem 1.6rem; color:var(--ivory); font-size:0.92rem; line-height:1.6;}
+.ash-price{ font-family:'Bodoni Moda', serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--rose); margin-bottom:0.5rem;}
+.ash-price strong{ display:block; font-family:'Cormorant Garamond', serif; font-style:italic; font-size:2.4rem; color:var(--gold); letter-spacing:0; margin-top:0.4rem;}
+.ash-note{ max-width:520px; margin:2.4rem auto 0; font-size:0.85rem; color:var(--rose); font-style:italic; line-height:1.7;}
+.ash-shipping-note{ margin-top:2rem; font-family:'Bodoni Moda', serif; font-size:0.7rem; letter-spacing:0.1em; color:var(--rose); opacity:0.75;}
+
+/* REVIEWS */
+.reviews{ padding:5rem 0; position:relative;}
+.reviews .eyebrow{ text-align:center; }
+.reviews h2{ font-family:'Bodoni Moda', serif; font-style:italic; font-size:1rem; color:var(--rose); text-align:center; margin-bottom:3rem; font-weight:500;}
+.review-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem;}
+.review-card{ border:1px solid var(--line); background:linear-gradient(160deg, rgba(180,154,106,0.05), rgba(91,48,59,0.05)); padding:1.8rem;}
+.review-card .stars{ color:var(--gold); font-size:0.85rem; margin-bottom:0.7rem;}
+.review-card p{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.02rem; line-height:1.6; margin:0 0 0.9rem; color:var(--ivory);}
+.review-card cite{ font-family:'Bodoni Moda', serif; font-size:0.62rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-style:normal; display:block;}
+
+/* CHARACTERS */
+.characters{ padding:6rem 0; text-align:center;}
+.characters h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2.2rem; margin-bottom:3rem;}
+.char-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; text-align:left;}
+.char-card{ border:1px solid var(--line); padding:1.8rem;}
+.char-card h3{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.4rem; margin:0 0 0.3rem; color:var(--gold);}
+.char-card .role{ font-family:'Bodoni Moda', serif; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); margin-bottom:0.8rem; display:block;}
+.char-card p{ color:var(--ivory); font-size:0.92rem; line-height:1.7; margin:0;}
+
+/* ABOUT letter */
+.about{ padding:6rem 0;}
+.letter{ max-width:680px; margin:0 auto; border:1px solid var(--line); padding:3rem 2.4rem; background:linear-gradient(160deg, rgba(180,154,106,0.04), rgba(91,48,59,0.05));}
+.letter p{ font-size:1.02rem; line-height:1.9; color:var(--ivory); margin:0 0 1.2rem;}
+.letter .sign{ margin-top:1.8rem; text-align:right;}
+.letter .sign .script{ font-size:2rem; color:var(--gold); display:block;}
+.letter .sign small{ font-family:'Bodoni Moda', serif; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose);}
+
+/* COMING SOON starfield */
+.coming-soon{ padding:6.5rem 2rem; text-align:center; background:radial-gradient(ellipse at center, rgba(42,32,32,0.5), var(--obsidian) 70%); position:relative; overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.stars{ position:absolute; inset:0; z-index:0;}
+.star{ position:absolute; width:2px; height:2px; background:var(--gold); border-radius:50%; opacity:0.5; animation:twinkle 4s ease-in-out infinite;}
+@keyframes twinkle{ 0%,100%{opacity:0.15;} 50%{opacity:0.8;} }
+.coming-soon .content{ position:relative; z-index:1; max-width:640px; margin:0 auto; display:flex; flex-direction:column; align-items:center;}
+.coming-soon h2{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:clamp(2rem,5vw,3rem); margin:0 0 0.8rem;}
+.coming-soon p.line{ font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--rose); font-size:1.1rem; margin-bottom:0.6rem;}
+.coming-soon .small{ color:var(--rose); font-size:0.8rem; opacity:0.7; margin-bottom:2rem;}
+
+.tis-cover{
+  width:150px; aspect-ratio:2/3; margin:0 auto 2.2rem; background:#0a090b;
+  border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center;
+  position:relative; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.55);
+}
+.tis-cover::before{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 50% 30%, rgba(180,154,106,0.10), transparent 60%);
+}
+.tis-cover .tis-title{ font-family:'Cormorant Garamond', serif; font-weight:500; letter-spacing:0.08em; color:var(--gold); font-size:1.05rem; text-align:center; line-height:1.3; padding:0 0.8rem; position:relative; z-index:1;}
+.tis-cover .tis-tag{ font-family:'Bodoni Moda', serif; font-size:0.5rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--rose); margin-top:0.9rem; position:relative; z-index:1;}
+
+/* READER CIRCLE + ARC */
+.two-col{ padding:6rem 0; display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+.panel{ border:1px solid var(--line); padding:2.6rem; text-align:center;}
+.panel .glyph{ font-size:1.6rem; color:var(--gold); margin-bottom:1rem;}
+.panel h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:1.8rem; margin:0 0 0.8rem;}
+.panel p{ color:var(--rose); line-height:1.75; margin-bottom:1.2rem; font-size:0.94rem;}
+.panel ul{ list-style:none; padding:0; text-align:left; color:var(--rose); font-size:0.88rem; line-height:2; margin-bottom:1.4rem;}
+.panel ul li::before{ content:"♡ "; color:var(--gold);}
+
+/* JOURNAL */
+.journal{ padding:6rem 0;}
+.journal h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2.2rem; text-align:center; margin-bottom:0.6rem;}
+.journal .sub{ text-align:center; color:var(--rose); margin-bottom:3rem;}
+.journal-list{ display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto;}
+.journal-list details{ border-bottom:1px solid var(--line); }
+.journal-list summary{
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.15rem; color:var(--ivory);
+  padding:1.1rem 0; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+}
+.journal-list summary::-webkit-details-marker{ display:none; }
+.journal-list summary::after{ content:"+"; color:var(--gold); font-family:'Bodoni Moda', serif; font-size:1.2rem; transition:transform .3s; }
+.journal-list details[open] summary::after{ content:"–"; }
+.journal-list .entry-body{ padding:0 0 1.8rem; }
+.journal-list .entry-body p{ font-size:0.96rem; line-height:1.9; color:var(--rose); margin:0 0 1.1rem;}
+.journal-list .entry-body p:last-child{ margin-bottom:0; }
+.journal-list .entry-soon{ font-family:'Bodoni Moda', serif; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); opacity:0.6; padding:0 0 1.6rem;}
+
+/* EXTRAS */
+.extras{ padding:5rem 0; text-align:center;}
+.extras h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2rem; margin-bottom:2.6rem;}
+.extras-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem;}
+.extra-card{ border:1px solid var(--line); padding:2rem 1.2rem; text-decoration:none; display:block; transition:border-color .3s, transform .3s;}
+.extra-card:hover{ border-color:var(--gold); transform:translateY(-4px);}
+.extra-card .glyph{ font-size:1.4rem; color:var(--gold); margin-bottom:0.8rem;}
+.extra-card span{ font-family:'Bodoni Moda', serif; font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--ivory);}
+
+/* SOCIAL */
+.social{ padding:5rem 0; text-align:center;}
+.social h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2rem; margin-bottom:2.6rem;}
+.social-grid{ display:flex; flex-wrap:wrap; justify-content:center; gap:2.2rem;}
+.social-grid a{ font-family:'Bodoni Moda', serif; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:0.3rem;}
+.social-grid a:hover{ color:var(--ivory); border-color:var(--gold);}
+
+/* CONTACT */
+.contact{ padding:6rem 0; text-align:center;}
+.contact h2{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:2.2rem; margin-bottom:0.6rem;}
+.contact p{ color:var(--rose); max-width:480px; margin:0 auto 2.6rem;}
+.contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; text-align:left;}
+.contact-card{ border:1px solid var(--line); padding:1.6rem; text-decoration:none; display:block; transition:border-color .3s, transform .3s;}
+.contact-card:hover{ border-color:var(--gold); transform:translateY(-3px);}
+.contact-card h4{ font-family:'Bodoni Moda', serif; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin:0 0 0.7rem;}
+.contact-card p{ margin:0; color:var(--ivory); font-size:0.9rem; text-align:left;}
+.email-line{ margin-top:2.6rem; font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.2rem; color:var(--gold); text-decoration:none; display:inline-block;}
+
+footer{ text-align:center; padding:3rem 2rem; font-family:'Bodoni Moda', serif; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose); opacity:0.75; border-top:1px solid var(--line);}
+footer .script{ display:block; font-size:1.2rem; color:var(--gold); text-transform:none; letter-spacing:0.02em; margin-bottom:0.7rem;}
+footer .fnav{ margin:0.9rem 0; }
+footer .fnav a, footer .fsocial a{ color:var(--rose); text-decoration:none; margin:0 0.5rem;}
+footer .fnav a:hover, footer .fsocial a:hover{ color:var(--gold);}
+footer .legal{ margin-top:1rem; opacity:0.6; font-size:0.58rem;}
+
+.reveal{ opacity:0; transform:translateY(20px); transition:opacity 1s ease, transform 1s ease;}
+.reveal.visible{ opacity:1; transform:translateY(0);}
+
+@media (max-width:760px){
+  .book-spotlight, .ed-grid, .review-grid, .char-grid, .two-col, .contact-grid, .why-inline-grid, .extras-grid, .ash-contents-list{ grid-template-columns:1fr; }
+  nav{ font-size:0.58rem; gap:1rem; }
+}
+@media (min-width:761px) and (max-width:980px){
+  .ed-grid{ grid-template-columns:1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#book">Books</a>
+  <a href="#journal">Journal</a>
+  <a href="#circle">Reader Circle</a>
+  <a href="#arc">ARC Team</a>
+  <a href="#ashbox">Ash Box</a>
+  <a href="#order">Order</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="hero">
+  <svg class="corner-flourish tl" viewBox="0 0 110 110" fill="none">
+    <path d="M10 60 Q10 20 50 15" stroke="#B49A6A" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="50" cy="15" r="1.4" fill="#B49A6A"/>
+    <path d="M50 15 Q60 8 70 18 Q75 10 68 5 Q60 2 55 8" stroke="#B49A6A" stroke-width="0.6" fill="none" opacity="0.7"/>
+    <path d="M20 45 l4 4 l-4 4 l-4 -4 z" fill="#B49A6A" opacity="0.5"/>
+    <path d="M30 25 l2.5 2.5 l-2.5 2.5 l-2.5 -2.5 z" fill="#9C7078" opacity="0.6"/>
+  </svg>
+  <svg class="corner-flourish br" viewBox="0 0 110 110" fill="none">
+    <path d="M10 60 Q10 20 50 15" stroke="#B49A6A" stroke-width="0.7" fill="none" opacity="0.6"/>
+    <circle cx="50" cy="15" r="1.4" fill="#B49A6A"/>
+    <path d="M50 15 Q60 8 70 18 Q75 10 68 5 Q60 2 55 8" stroke="#B49A6A" stroke-width="0.6" fill="none" opacity="0.7"/>
+    <path d="M20 45 l4 4 l-4 4 l-4 -4 z" fill="#B49A6A" opacity="0.5"/>
+    <path d="M30 25 l2.5 2.5 l-2.5 2.5 l-2.5 -2.5 z" fill="#9C7078" opacity="0.6"/>
+  </svg>
+  <div class="dust">
+    <span style="top:20%; left:15%; animation-delay:0s;"></span>
+    <span style="top:35%; left:80%; animation-delay:1.5s;"></span>
+    <span style="top:65%; left:10%; animation-delay:3s;"></span>
+    <span style="top:75%; left:85%; animation-delay:2s;"></span>
+    <span style="top:50%; left:50%; animation-delay:4s;"></span>
+  </div>
+  <svg class="wax-seal" viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="46" fill="#5B303B" opacity="0.35"/>
+    <circle cx="50" cy="50" r="46" stroke="#B49A6A" stroke-width="1" fill="none"/>
+    <circle cx="50" cy="50" r="38" stroke="#B49A6A" stroke-width="0.5" fill="none" opacity="0.6"/>
+    <text x="50" y="59" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="30" fill="#E8DDCC" font-style="italic">HK</text>
+  </svg>
+  <svg class="moon" viewBox="0 0 100 100" fill="none">
+    <path d="M62 15 A38 38 0 1 0 62 85 A30 30 0 1 1 62 15 Z" fill="#B49A6A" opacity="0.9"/>
+    <circle cx="78" cy="30" r="1.6" fill="#E8DDCC"/>
+    <circle cx="85" cy="45" r="1" fill="#E8DDCC"/>
+  </svg>
+  <h1 class="wordmark">HADIA KULSOOM</h1>
+  <div class="role">Romance Author</div>
+  <p class="tagline">Stories of love, loss, and the strength to begin again.</p>
+  <div class="btn-row">
+    <a class="btn filled" href="#book">Explore My Books</a>
+    <a class="btn" href="#circle">Enter the Reader Circle</a>
+  </div>
+  <p class="hero-note">Some stories begin with love. Others begin with everything that came after. <span class="sparkle-inline">✦</span></p>
+</section>
+
+<section class="quote-banner reveal">
+  <div class="dust">
+    <span style="top:15%; left:20%; animation-delay:0.5s;"></span>
+    <span style="top:70%; left:75%; animation-delay:2.5s;"></span>
+    <span style="top:40%; left:90%; animation-delay:1s;"></span>
+    <span style="top:80%; left:12%; animation-delay:3.5s;"></span>
+  </div>
+  <svg class="moonlet" viewBox="0 0 100 100" fill="none">
+    <path d="M62 15 A38 38 0 1 0 62 85 A30 30 0 1 1 62 15 Z" fill="#B49A6A" opacity="0.9"/>
+    <circle cx="78" cy="30" r="1.6" fill="#E8DDCC"/>
+  </svg>
+  <blockquote>"I don't write happy endings. I write the endings I still believe are possible." <span class="sparkle-inline">✧</span></blockquote>
+  <div class="attribution">— Hadia Kulsoom</div>
+</section>
+
+<section class="about reveal" id="about">
+  <div class="dust">
+    <span style="top:10%; left:8%; animation-delay:0.8s;"></span>
+    <span style="top:60%; left:92%; animation-delay:2.2s;"></span>
+    <span style="top:85%; left:6%; animation-delay:1.4s;"></span>
+  </div>
+  <div class="wrap">
+  <div class="letter">
+    <div class="eyebrow">Meet Hadia</div>
+    <p>Hello, and welcome. I'm Hadia Kulsoom, a romance author and the writer behind Built From Ashes.</p>
+    <p>I write stories about complicated people, impossible feelings, second chances, and the things we carry long after a relationship ends. My characters tend to be ambitious, flawed, stubborn, emotional, and occasionally very bad at communicating — which, unfortunately, makes them rather human.</p>
+    <p>I love stories that leave something behind after the last page: a feeling, a question, a character you can't stop thinking about, or a scene that refuses to leave your head. I keep my face out of it, mostly — not because there's a secret worth guarding, but because I like the idea that a reader meets my characters before they ever meet me.</p>
+    <p>If you've found your way here, thank you for reading.</p>
+    <div class="sign"><span class="script">with love,</span><small>Hadia</small></div>
+  </div>
+  </div>
+</section>
+
+<div class="divider"><div class="rule"></div>☽ ✦ ☾<div class="rule"></div></div>
+
+<section class="book-spotlight wrap reveal" id="book">
+  <div class="sparkle-field">
+    <span class="sparkle" style="top:5%; left:8%; font-size:1.1rem;">✦</span>
+    <span class="sparkle" style="top:60%; left:3%; font-size:0.8rem; animation-delay:1.2s;">✧</span>
+    <span class="sparkle" style="top:88%; left:12%; font-size:0.7rem; animation-delay:2s;">✦</span>
+  </div>
+  <div class="book-cover"><img src="assets/built_from_ashes_cover.png" alt="Built From Ashes book cover by Hadia Kulsoom"></div>
+  <div class="book-info">
+    <div class="eyebrow">Featured Book · Contemporary Romance</div>
+    <h2>Built From Ashes</h2>
+    <p class="line">Meeting him again was never part of the plan. But destruction never asked permission.</p>
+    <p class="desc">A second-chance romance about heartbreak, ambition, forgiveness, and finding your way back to the person you never truly forgot. Bella has spent years rebuilding herself from the ashes of a love that once destroyed her — now CEO of the company she built through sheer determination, she's created a life where she needs no one. Until Zavian walks back into it.</p>
+    <div class="chip-row">
+      <span class="chip">Second Chance</span><span class="chip">Workplace Romance</span>
+      <span class="chip">Dual POV</span><span class="chip">Powerful Female Lead</span>
+      <span class="chip">Healing & Forgiveness</span>
+    </div>
+    <div class="link-row">
+      <a class="text-link" href="https://a.co/d/0eSmF9J8" target="_blank" rel="noopener">Buy on Amazon →</a>
+      <a class="text-link" href="https://www.goodreads.com/author/show/59317885.Hadia_Kulsoom" target="_blank" rel="noopener">Add to Goodreads →</a>
+    </div>
+
+    <div class="why-inline">
+      <div class="eyebrow">Why Readers Love This Book <span class="sparkle-inline">✧</span></div>
+      <div class="why-inline-grid">
+        <div class="why-inline-card"><h4>Second Chances</h4><p>Some people leave your life without ever really leaving your heart.</p></div>
+        <div class="why-inline-card"><h4>A Powerful Heroine</h4><p>Bella is ambitious, independent, and determined to build a life on her own terms.</p></div>
+        <div class="why-inline-card"><h4>Workplace Tension</h4><p>The past becomes much harder to ignore when you have to see each other across the same conference table.</p></div>
+        <div class="why-inline-card"><h4>Dual POV</h4><p>Two perspectives. One history. Two versions of what happened.</p></div>
+        <div class="why-inline-card"><h4>Healing & Forgiveness</h4><p>Some wounds don't disappear. You simply learn how to live beyond them.</p></div>
+        <div class="why-inline-card"><h4>Emotional Romance</h4><p>For readers who want their happily-ever-after to be earned.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="rule"></div>☽ ✦ ☾<div class="rule"></div></div>
+
+<section class="reviews wrap reveal">
+  <div class="eyebrow">Reviews <span class="sparkle-inline">✦</span></div>
+  <h2>Some words belong to the author. Others belong to the people who opened the book and made the story their own.</h2>
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>"You can tell Hadia put a lot of thought into her characters. Zavian and Bella have to fight through hard times to grow — and I really hope to see more of Sofia and Alex."</p>
+      <cite>Goodreads Reader · June 2026</cite>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"It sucks you in from the first page. The chemistry between Bella and Zavian keeps you wanting to know more."</p>
+      <cite>Goodreads Reader · July 2026</cite>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>"I loved the chemistry between Bella and Zavian, and how everything came together in the end. Looking forward to her future works."</p>
+      <cite>Goodreads Reader · June 2026</cite>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>"If you're a fan of Ana Huang's twisted series, this might be a book for you. Bella is a powerhouse and won't let anyone stand in her way."</p>
+      <cite>Goodreads Reader · June 2026</cite>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="rule"></div>☽ ✦ ☾<div class="rule"></div></div>
+
+<section class="characters wrap reveal">
+  <h2>Meet the Characters</h2>
+  <div class="char-grid">
+    <div class="char-card"><h3>Bella Zareef-Valencia</h3><span class="role">The woman who rebuilt herself</span><p>Fierce. Ambitious. Elegant. Vulnerable in the places she refuses to show. Bella learned how to build a life after heartbreak — and she's determined never to let anyone take it from her again.</p></div>
+    <div class="char-card"><h3>Zavian Miller</h3><span class="role">The man who never stopped carrying the past</span><p>Quiet. Driven. Regretful. Some apologies arrive years too late. Some feelings never leave at all.</p></div>
+    <div class="char-card"><h3>Sofia</h3><span class="role">The friend readers keep asking about</span><p>Loyal, ambitious, and impossible to overlook whenever she enters the story.</p></div>
+    <div class="char-card"><h3>Alex</h3><span class="role">The one who always has his people's backs</span><p>Protective, successful, and deeply connected to the people he loves.</p></div>
+  </div>
+</section>
+
+<section class="coming-soon reveal">
+  <div class="stars" id="stars"></div>
+  <div class="content">
+    <div class="eyebrow">Coming Soon</div>
+    <div class="tis-cover">
+      <div class="tis-title">TRAPPED<br>IN<br>SHADOWS</div>
+      <div class="tis-tag">Coming Soon</div>
+    </div>
+    <h2>Trapped in Shadows</h2>
+    <p class="line">Some stories are better left buried. Until someone decides to dig them up.</p>
+    <p class="small">More details coming soon.</p>
+    <a class="btn filled" href="#circle">Follow for Updates</a>
+  </div>
+</section>
+
+<div class="divider"><div class="rule"></div>☽ ✦ ☾<div class="rule"></div></div>
+
+<section class="journal reveal" id="journal" style="position:relative;">
+  <div class="dust">
+    <span style="top:8%; left:90%; animation-delay:1.8s;"></span>
+    <span style="top:50%; left:4%; animation-delay:0.4s;"></span>
+    <span style="top:92%; left:88%; animation-delay:3.2s;"></span>
+  </div>
+  <div class="wrap">
+  <h2>From the Author's Desk <span class="sparkle-inline">✧</span></h2>
+  <p class="sub">A small corner of the internet for stories behind the stories.</p>
+  <div class="journal-list">
+
+    <details>
+      <summary>Why I Wrote Built From Ashes</summary>
+      <div class="entry-body">
+        <p>Some stories are written because you have an idea. Others are written because there is something inside you that needs somewhere to go.</p>
+        <p>Built from Ashes is a story that will always be especially close to my heart. I think a small part of me wrote this book because I wanted to give my characters something I never had. A second chance.</p>
+        <p>There was once someone I cared about deeply. We were separated by circumstances, and eventually, life simply carried us in different directions. We left college, went our separate ways, and never found our way back to each other.</p>
+        <p>There was no perfect ending. No final conversation where everything was explained. No moment where we met again years later and finally said everything we had left unsaid. Just a story that ended before I was ready for it to end.</p>
+        <p>So I wrote another one. Not about us — not exactly. Bella and Zavian are their own people, with their own lives, mistakes, wounds, and choices. But somewhere between their pages, I found myself putting pieces of feelings I had once known into their story.</p>
+        <p>I gave them the conversations I never got to have. The answers I never received. The chance to meet again. And most importantly, the chance to choose each other again.</p>
+        <p>Maybe that's why Bella's journey means so much to me. She doesn't simply get the person she loves back. She has to become someone who can stand on her own first. She has to rebuild herself, her dreams, and her life before she can decide whether there is still a place for him in it. And Zavian has to learn that loving someone isn't enough if you don't understand how your choices affected them.</p>
+        <p>I didn't write Built from Ashes because I believe every lost love should come back. I wrote it because sometimes we don't get the ending we wanted in real life. And fiction gives us a beautiful place to explore the what ifs. What if they had met again? What if they had finally said everything? What if the timing had been different? What if, after everything, they still found their way home?</p>
+        <p>Built from Ashes became my answer to those questions. Perhaps that's why the title feels so fitting to me. Because sometimes you can't rebuild what you had. You can only take what survived and build something new from the ashes.</p>
+        <p>And maybe, in giving Bella and Zavian the second chance I never got, I gave a little piece of myself one too. 🕯️</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Meet Bella</summary>
+      <div class="entry-soon">More on Bella, coming soon.</div>
+    </details>
+
+    <details>
+      <summary>Meet Zavian</summary>
+      <div class="entry-soon">More on Zavian, coming soon.</div>
+    </details>
+
+    <details>
+      <summary>The Characters Who Stole the Spotlight</summary>
+      <div class="entry-soon">Sofia, Alex, and the rest of the cast — coming soon.</div>
+    </details>
+
+    <details>
+      <summary>The Story Behind the Cover</summary>
+      <div class="entry-body">
+        <p>Before there was a cover, there was a feeling.</p>
+        <p>I wanted the cover of Built from Ashes to feel like the story itself — beautiful, damaged, dark, and a little haunting.</p>
+        <p>The broken mirror became the centre of it because Bella's story is so much about identity and reflection. A mirror shows you what is in front of you. But a broken mirror shows you pieces. Different versions. Different angles. Different ways of seeing the same person. And that felt very much like Bella and Zavian.</p>
+        <p>The darkness represents everything that exists underneath the polished world they live in — the things they don't say, the wounds they carry, and everything from their past that refuses to stay buried.</p>
+        <p>Then there's the flower. It's a belladonna flower. Deadly and beautiful. Zavian refers to Bella as his Belladonna — beautiful, yet deadly. A reminder that destruction doesn't necessarily mean the end of something. Sometimes it's where something begins again.</p>
+        <p>I wanted the gold typography to bring in that feeling of luxury and ambition, while the darker textures keep the cover rooted in the emotional side of the story.</p>
+        <p>The final cover became something I love because it doesn't simply say romance. It says: Something broke here. And somehow, something still grew.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What I'm Writing Now</summary>
+      <div class="entry-body">
+        <p>The next story is already taking shape.</p>
+        <p>I'm currently working on Trapped in Shadows, a story that takes me somewhere very different from Built from Ashes.</p>
+        <p>It's the beginning of a trilogy, and I'm slowly building a world filled with secrets, complicated relationships, dangerous choices, and characters who aren't always what they seem.</p>
+        <p>I'm not ready to reveal everything yet. Some stories need to remain in the shadows for a little while longer.</p>
+        <p>But I can tell you this: I'm writing another story about people carrying things they don't know how to say out loud. And this time, I'm taking you somewhere darker.</p>
+        <p>For now, I'll let the shadows keep their secrets. More soon. 🕯️</p>
+      </div>
+    </details>
+
+  </div>
+  </div>
+</section>
+
+<section class="two-col wrap" id="circle-arc">
+  <div class="panel reveal" id="circle">
+    <div class="glyph">🗝️</div>
+    <h2>The Reader Circle</h2>
+    <p>A casual, cozy corner to hang out between books. Think of it as a running conversation, not a newsletter — sneak peeks, polls, character chats, and cover reveals first, with zero pressure to do anything but enjoy it.</p>
+    <ul><li>Behind-the-scenes chats</li><li>First look at cover reveals</li><li>Character teasers & polls</li><li>Casual, no-commitment vibes</li></ul>
+    <a class="text-link" href="https://substack.com/@hadiakulsoom?utm_source=share&utm_medium=android&r=8gnt9z" target="_blank" rel="noopener">Join the Reader Circle Chat →</a>
+  </div>
+  <div class="panel reveal" id="arc">
+    <div class="glyph">📖</div>
+    <h2>The Early Readers (ARC Team)</h2>
+    <p>A small, dedicated team who receive advance copies before release in exchange for honest reviews. This is a bit more of a commitment — you'll read on a schedule and share real feedback before launch day.</p>
+    <ul><li>Free advance reader copies</li><li>Direct input before publication</li><li>Leave the very first reviews</li><li>Limited, application-based team</li></ul>
+    <a class="text-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc7n3-71SUSKVcfhz6D3hruGwJ81XLd5TA7JSxTtCjTWacQCA/viewform?usp=publish-editor" target="_blank" rel="noopener">Apply via ARC Form →</a>
+  </div>
+</section>
+
+<div class="divider"><div class="rule"></div>☽ ✦ ☾<div class="rule"></div></div>
+
+<section class="ash-box wrap reveal" id="ashbox">
+  <div class="ash-box-panel">
+    <div class="dust">
+      <span style="top:10%; left:6%; animation-delay:0.6s;"></span>
+      <span style="top:80%; left:92%; animation-delay:2.4s;"></span>
+      <span style="top:20%; left:90%; animation-delay:1.6s;"></span>
+    </div>
+    <div class="glyph-big">🕯️</div>
+    <div class="eyebrow">The Ash Box</div>
+    <h2>A little piece of Built from Ashes, made just for you.</h2>
+    <p class="ash-tagline">More than a book. More than a keepsake. <span class="sparkle-inline">✧</span></p>
+    <div class="ash-desc">
+      <p>Some stories deserve to be held, not just read. The Ash Box is my way of turning Built from Ashes into something you can keep — on a shelf, in a drawer, in your hands on a hard day — a small, tangible piece of Bella and Zavian's world to carry with you.</p>
+      <p>Each box is made in limited numbers, entirely by hand. I sign it, pack it, and choose every piece myself, which means no two readers ever open quite the same story twice.</p>
+    </div>
+
+    <div class="ash-contents">
+      <div class="eyebrow" style="text-align:center;">✦ Inside Your Ash Box</div>
+      <ul class="ash-contents-list">
+        <li>📖 A signed & personalized copy of Built from Ashes</li>
+        <li>💌 A personal letter from the author</li>
+        <li>🖤 A character letter — choose Bella, Zavian, Sofia, Alex, or let it be a surprise</li>
+        <li>🥀 Exclusive belladonna art card</li>
+        <li>🔖 A special Built from Ashes bookmark</li>
+        <li>🎨 Character art</li>
+        <li>✦ Numbered collector card</li>
+        <li>🖊️ A bookish highlighter</li>
+        <li>✨ Exclusive A4 Built from Ashes sticker sheet</li>
+        <li>📦 Beautifully packed by hand</li>
+      </ul>
+    </div>
+
+    <div class="ash-price">🕯️ First Edition<strong>$35.99 <span style="font-size:1.1rem; color:var(--rose);">+ shipping</span></strong></div>
+    <a class="btn filled" href="https://docs.google.com/forms/d/e/1FAIpQLSdJpL-Hdjehts4rhyWWDfQzzICS1RowpMQTeWgDjnz4s2KDsg/viewform?usp=publish-editor" target="_blank" rel="noopener" style="margin-top:1.4rem; display:inline-block;">Request an Ash Box</a>
+
+    <p class="ash-note">After submitting your request, you'll receive an email with payment and shipping details before your box is prepared.</p>
+    <p class="ash-shipping-note">✦ A Little Note — Because each Ash Box is individually prepared, please allow additional processing time before your order ships. International shipping times vary depending on destination.</p>
+  </div>
+</section>
+
+<div class="divider"><div class="rule"></div>☽ ✦ ☾<div class="rule"></div></div>
+
+<section class="editions wrap reveal" id="order">
+  <div class="eyebrow">Order</div>
+  <h2>How would you like your copy?</h2>
+  <p>Every reader deserves to choose how their story arrives.</p>
+  <div class="ed-grid">
+    <div class="ed-card">
+      <h3>🛒 Amazon Edition</h3>
+      <ul><li>Physical book</li><li>Standard edition</li><li>Fastest delivery</li></ul>
+      <a class="text-link" href="https://a.co/d/0eSmF9J8" target="_blank" rel="noopener">Buy on Amazon →</a>
+    </div>
+    <div class="ed-card">
+      <h3>🕯️ Direct From Hadia</h3>
+      <ul><li>Author signature</li><li>Handwritten note</li><li>Bookmark & reader gift</li></ul>
+      <div class="ash-price" style="text-align:left; margin-bottom:1rem;">Price<strong style="font-size:1.6rem;">$23.00 <span style="font-size:0.95rem; color:var(--rose);">+ shipping</span></strong></div>
+      <a class="text-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=hadiyaakulsoom@gmail.com&su=Personal%20Edition%20Request" target="_blank" rel="noopener">Get a Personal Edition →</a>
+    </div>
+    <div class="ed-card">
+      <h3>🖤 The Ash Box</h3>
+      <ul><li>Signed, personalized copy</li><li>Character letter & art card</li><li>Collector card & sticker sheet</li><li>Handmade, limited edition</li></ul>
+      <a class="text-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdJpL-Hdjehts4rhyWWDfQzzICS1RowpMQTeWgDjnz4s2KDsg/viewform?usp=publish-editor" target="_blank" rel="noopener">Request an Ash Box →</a>
+    </div>
+  </div>
+</section>
+
+<section class="extras wrap reveal">
+  <h2>Extras <span class="sparkle-inline">✧</span></h2>
+  <div class="extras-grid">
+    <a class="extra-card" href="https://docs.google.com/document/d/10jN73vLMPfQLRpvp_fUt0QKHYly-bjh9/edit?usp=drive_link&ouid=104955436552200431916&rtpof=true&sd=true" target="_blank" rel="noopener">
+      <div class="glyph">🕯️</div>
+      <span>Bonus Scenes</span>
+    </a>
+    <a class="extra-card" href="https://pin.it/4zho9naIr" target="_blank" rel="noopener">
+      <div class="glyph">🖼️</div>
+      <span>Moodboards</span>
+    </a>
+    <a class="extra-card" href="https://open.spotify.com/user/31mumt3egyuncjg6gc4xrt6h3tkm?si=HB2U_EYoRKidrbkEolCnkw&utm_source=whatsapp" target="_blank" rel="noopener">
+      <div class="glyph">🎧</div>
+      <span>Playlists</span>
+    </a>
+  </div>
+</section>
+
+<section class="social wrap reveal">
+  <h2>Find Hadia</h2>
+  <div class="social-grid">
+    <a href="https://www.instagram.com/authorhadi?igsh=MXZvcHlrYm1pbmFjcg==" target="_blank" rel="noopener">Instagram — @authorhadi</a>
+    <a href="https://www.tiktok.com/@author.hadi?_r=1&_t=ZS-98WuONU1NiL" target="_blank" rel="noopener">TikTok — @author.hadi</a>
+    <a href="https://www.facebook.com/share/1HnjsgZ8Td/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.goodreads.com/author/show/59317885.Hadia_Kulsoom" target="_blank" rel="noopener">Goodreads</a>
+    <a href="https://substack.com/@hadiakulsoom?utm_source=share&utm_medium=android&r=8gnt9z" target="_blank" rel="noopener">Substack</a>
+    <a href="https://amazon.com/author/hadiakulsoom" target="_blank" rel="noopener">Amazon Author Page</a>
+    <a href="https://a.co/d/0eSmF9J8" target="_blank" rel="noopener">Amazon Shop</a>
+    <a href="https://pin.it/4zho9naIr" target="_blank" rel="noopener">Pinterest</a>
+    <a href="https://open.spotify.com/user/31mumt3egyuncjg6gc4xrt6h3tkm?si=HB2U_EYoRKidrbkEolCnkw&utm_source=whatsapp" target="_blank" rel="noopener">Spotify</a>
+  </div>
+</section>
+
+<section class="contact wrap reveal" id="contact">
+  <h2>Write to Me <span class="sparkle-inline">✦</span></h2>
+  <p>Have a question about my books? Want to say hello? Have a review, interview, collaboration, or publishing inquiry? I'd love to hear from you.</p>
+  <div class="contact-grid">
+    <a class="contact-card" href="https://mail.google.com/mail/?view=cm&fs=1&to=hadiyaakulsoom@gmail.com&su=Reader%20Question" target="_blank" rel="noopener">
+      <h4>Readers — A Question</h4>
+      <p>For questions, messages, and book-related conversations.</p>
+    </a>
+    <a class="contact-card" href="https://mail.google.com/mail/?view=cm&fs=1&to=hadiyaakulsoom@gmail.com&su=Review%20%2F%20ARC%20Inquiry" target="_blank" rel="noopener">
+      <h4>Reviewers</h4>
+      <p>For review and ARC inquiries.</p>
+    </a>
+    <a class="contact-card" href="https://mail.google.com/mail/?view=cm&fs=1&to=hadiyaakulsoom@gmail.com&su=Business%20%26%20Collaboration" target="_blank" rel="noopener">
+      <h4>Business & Collaborations</h4>
+      <p>For professional inquiries, interviews, and media opportunities.</p>
+    </a>
+  </div>
+  <a class="email-line" href="https://mail.google.com/mail/?view=cm&fs=1&to=hadiyaakulsoom@gmail.com" target="_blank" rel="noopener">hadiyaakulsoom@gmail.com</a>
+</section>
+
+<footer>
+  <span class="script">Romance written between heartbreak and hope.</span>
+  HADIA KULSOOM
+  <div class="fnav">
+    <a href="#about">About</a>·<a href="#book">Books</a>·<a href="#journal">Journal</a>·<a href="#circle">Reader Circle</a>·<a href="#arc">ARC Team</a>·<a href="#ashbox">Ash Box</a>·<a href="#order">Order</a>·<a href="#contact">Contact</a>
+  </div>
+  <div class="fsocial">
+    <a href="https://www.instagram.com/authorhadi?igsh=MXZvcHlrYm1pbmFjcg==" target="_blank" rel="noopener">Instagram</a>·<a href="https://www.tiktok.com/@author.hadi?_r=1&_t=ZS-98WuONU1NiL" target="_blank" rel="noopener">TikTok</a>·<a href="https://www.goodreads.com/author/show/59317885.Hadia_Kulsoom" target="_blank" rel="noopener">Goodreads</a>·<a href="https://www.facebook.com/share/1HnjsgZ8Td/" target="_blank" rel="noopener">Facebook</a>·<a href="https://amazon.com/author/hadiakulsoom" target="_blank" rel="noopener">Amazon</a>·<a href="https://substack.com/@hadiakulsoom?utm_source=share&utm_medium=android&r=8gnt9z" target="_blank" rel="noopener">Substack</a>
+  </div>
+  <div class="legal">© 2026 Hadia Kulsoom. All rights reserved. · Privacy Policy | Terms | Contact</div>
+</footer>
+
+<script>
+  const starsWrap = document.getElementById('stars');
+  for(let i=0;i<50;i++){
+    const s = document.createElement('div'); s.className='star';
+    s.style.left = Math.random()*100+'%'; s.style.top = Math.random()*100+'%';
+    s.style.animationDelay = (Math.random()*4)+'s';
+    starsWrap.appendChild(s);
+  }
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold:0.1});
+  revealEls.forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
